@@ -788,22 +788,96 @@ export class InclusiveDatesCalendar {
               </div>
               {this.showKeyboardHint &&
                 !window.matchMedia("(pointer: coarse)").matches && (
-                  <button
-                    type="button"
-                    onClick={() => alert("Todo: Add Keyboard helper!")}
-                    class={this.getClassName("keyboard-hint")}
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      height="1em"
-                      width="1em"
-                      viewBox="0 0 48 48"
-                      fill="currentColor"
-                    >
-                      <path d="M7 38q-1.2 0-2.1-.925Q4 36.15 4 35V13q0-1.2.9-2.1.9-.9 2.1-.9h34q1.2 0 2.1.9.9.9.9 2.1v22q0 1.15-.9 2.075Q42.2 38 41 38Zm0-3h34V13H7v22Zm8-3.25h18v-3H15Zm-4.85-6.25h3v-3h-3Zm6.2 0h3v-3h-3Zm6.15 0h3v-3h-3Zm6.2 0h3v-3h-3Zm6.15 0h3v-3h-3Zm-24.7-6.25h3v-3h-3Zm6.2 0h3v-3h-3Zm6.15 0h3v-3h-3Zm6.2 0h3v-3h-3Zm6.15 0h3v-3h-3ZM7 35V13v22Z" />
-                    </svg>
-                    {this.labels.keyboardHint}
-                  </button>
+                  <details class="{this.getClassName("keyboard-shortcuts")}">
+                    <summary>
+                      <span class="{this.getClassName("keyboard-hint")}">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          height="1em"
+                          width="1em"
+                          viewBox="0 0 48 48"
+                          fill="currentColor"
+                        >
+                          <path d="M7 38q-1.2 0-2.1-.925Q4 36.15 4 35V13q0-1.2.9-2.1.9-.9 2.1-.9h34q1.2 0 2.1.9.9.9.9 2.1v22q0 1.15-.9 2.075Q42.2 38 41 38Zm0-3h34V13H7v22Zm8-3.25h18v-3H15Zm-4.85-6.25h3v-3h-3Zm6.2 0h3v-3h-3Zm6.15 0h3v-3h-3Zm6.2 0h3v-3h-3Zm6.15 0h3v-3h-3Zm-24.7-6.25h3v-3h-3Zm6.2 0h3v-3h-3Zm6.15 0h3v-3h-3Zm6.2 0h3v-3h-3Zm6.15 0h3v-3h-3ZM7 35V13v22Z" />
+                        </svg>
+                      {this.labels.keyboardHint}
+                      </span>
+                    </summary>
+                    <table class="{this.getClassName("keyboard-shortcuts-table")}">
+                          <thead>
+                            <tr>
+                              <th>Key</th>
+                              <th>Action</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td><kbd>Tab</kbd></td>
+                              <td>Cycle through the focusable elements.</td>
+                            </tr>
+                            <tr>
+                              <td><kbd>Space</kbd>, <kbd>Enter</kbd></td>
+                              <td>Select current day.</td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <kbd>Arrow left</kbd>
+                              </td>
+                              <td>Move cursor to previous day.</td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <kbd>Arrow right</kbd>
+                              </td>
+                              <td>Move cursor to next day.</td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <kbd>Arrow up</kbd>
+                              </td>
+                              <td>Move cursor to previous week.</td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <kbd>Arrow down</kbd>
+                              </td>
+                              <td>Move cursor to next week.</td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <kbd>Page up</kbd>
+                              </td>
+                              <td>Move cursor to previous month.</td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <kbd>Page down</kbd>
+                              </td>
+                              <td>Move cursor to next month.</td>
+                            </tr>
+                            <tr>
+                              <td><kbd>Shift</kbd> + <kbd>Page up</kbd></td>
+                              <td>Move cursor to previous year.</td>
+                            </tr>
+                            <tr>
+                              <td><kbd>Shift</kbd> + <kbd>Page down</kbd></td>
+                              <td>Move cursor to next year.</td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <kbd>Home</kbd>
+                              </td>
+                              <td>Move cursor to first day of the month.</td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <kbd>End</kbd>
+                              </td>
+                              <td>Move cursor to last day of the month.</td>
+                            </tr>
+                            </tbody>
+                          </table>
+                      </details>
                 )}
             </div>
           )}
