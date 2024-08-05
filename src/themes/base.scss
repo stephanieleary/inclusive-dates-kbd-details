@@ -342,6 +342,10 @@ inclusive-dates *:focus-visible {
   margin-inline: 0.25rem;
 }
 
+.inclusive-dates-calendar__keyboard-shortcuts tr {
+  border-bottom: 1px solid var(--border-color);
+}
+
 .inclusive-dates-calendar__keyboard-shortcuts th, 
 .inclusive-dates-calendar__keyboard-shortcuts td {
   vertical-align: top;
