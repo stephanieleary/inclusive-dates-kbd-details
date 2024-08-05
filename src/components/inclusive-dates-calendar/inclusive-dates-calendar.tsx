@@ -46,6 +46,31 @@ export type InclusiveDatesCalendarLabels = {
   todayButton: string;
   yearSelect: string;
   keyboardHint: string;
+  keyboardKeyTab: string;
+  keyboardKeySpace: string;
+  keyboardKeyEnter: string;
+  keyboardKeyArrowleft: string;
+  keyboardKeyArrowright: string;
+  keyboardKeyArrowup: string;
+  keyboardKeyArrowdown: string;
+  keyboardKeyPageup: string;
+  keyboardKeyPagedown: string;
+  keyboardKeyHome: string;
+  keyboardKeyEnd: string;
+  keyboardShortcutHeaderKey: string;
+  keyboardShortcutHeaderAction: string;
+  keyboardShortcutTab: string;
+  keyboardShortcutEnter: string;
+  keyboardShortcutArrowleft: string;
+  keyboardShortcutArrowright: string;
+  keyboardShortcutArrowup: string;
+  keyboardShortcutArrowdown: string;
+  keyboardShortcutPageup: string;
+  keyboardShortcutPagedown: string;
+  keyboardShortcutShiftPageup: string;
+  keyboardShortcutShiftPagedown: string;
+  keyboardShortcutHome: string;
+  keyboardShortcutEnd: string;
   selected: string;
   chooseAsStartDate: string;
   chooseAsEndDate: string;
@@ -62,6 +87,31 @@ const defaultLabels: InclusiveDatesCalendarLabels = {
   todayButton: "Show today",
   yearSelect: "Select year",
   keyboardHint: "Keyboard commands",
+  keyboardKeyTab: "Tab",
+  keyboardKeySpace: "Space",
+  keyboardKeyEnter: "Enter",
+  keyboardKeyArrowleft: "Arrow left",
+  keyboardKeyArrowright: "Arrow right",
+  keyboardKeyArrowup: "Arrow up",
+  keyboardKeyArrowdown: "Arrow down",
+  keyboardKeyPageup: "Page up",
+  keyboardKeyPagedown: "Page down",
+  keyboardKeyHome: "Home",
+  keyboardKeyEnd: "End",
+  keyboardShortcutHeaderKey: "Key",
+  keyboardShortcutHeaderAction: "Action",
+  keyboardShortcutTab: "Cycle through the focusable elements.",
+  keyboardShortcutEnter: "Select current day.",
+  keyboardShortcutArrowleft: "Move cursor to previous day.",
+  keyboardShortcutArrowright: "Move cursor to next day.",
+  keyboardShortcutArrowup: "Move cursor to previous week.",
+  keyboardShortcutArrowdown: "Move cursor to next week.",
+  keyboardShortcutPageup: "Move cursor to previous month.",
+  keyboardShortcutPagedown: "Move cursor to next month.",
+  keyboardShortcutShiftPageup: "Move cursor to previous year.",
+  keyboardShortcutShiftPagedown: "Move cursor to next year.",
+  keyboardShortcutHome: "Move cursor to first day of the month.",
+  keyboardShortcutEnd: "Move cursor to last day of the month.",
   selected: "Selected date",
   chooseAsStartDate: "choose as start date",
   chooseAsEndDate: "choose as end date"
@@ -806,74 +856,74 @@ export class InclusiveDatesCalendar {
                     <table class="{this.getClassName("keyboard-shortcuts-table")}">
                           <thead>
                             <tr>
-                              <th>Key</th>
-                              <th>Action</th>
+                              <th>{this.labels.keyboardShortcutHeaderKey}</th>
+                              <th>{this.labels.keyboardShortcutHeaderAction}</th>
                             </tr>
                           </thead>
                           <tbody>
                             <tr>
-                              <td><kbd>Tab</kbd></td>
-                              <td>Cycle through the focusable elements.</td>
+                              <td><kbd>{this.labels.keyboardKeyTab}</kbd></td>
+                              <td>{this.labels.keyboardShortcutTab}</td>
                             </tr>
                             <tr>
-                              <td><kbd>Space</kbd>, <kbd>Enter</kbd></td>
-                              <td>Select current day.</td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <kbd>Arrow left</kbd>
-                              </td>
-                              <td>Move cursor to previous day.</td>
+                              <td><kbd>{this.labels.keyboardKeySpace}</kbd>, <kbd>{this.labels.keyboardKeyEnter}</kbd></td>
+                              <td>{this.labels.keyboardShortcutEnter}</td>
                             </tr>
                             <tr>
                               <td>
-                                <kbd>Arrow right</kbd>
+                                <kbd>{this.labels.keyboardKeyArrowleft}</kbd>
                               </td>
-                              <td>Move cursor to next day.</td>
+                              <td>{this.labels.keyboardShortcutArrowleft}</td>
                             </tr>
                             <tr>
                               <td>
-                                <kbd>Arrow up</kbd>
+                                <kbd>{this.labels.keyboardKeyArrowright}</kbd>
                               </td>
-                              <td>Move cursor to previous week.</td>
+                              <td>{this.labels.keyboardShortcutArrowRight}</td>
                             </tr>
                             <tr>
                               <td>
-                                <kbd>Arrow down</kbd>
+                                <kbd>{this.labels.keyboardKeyArrowup}</kbd>
                               </td>
-                              <td>Move cursor to next week.</td>
+                              <td>{this.labels.keyboardShortcutArrowup}</td>
                             </tr>
                             <tr>
                               <td>
-                                <kbd>Page up</kbd>
+                                <kbd>{this.labels.keyboardKeyArrowdown}</kbd>
                               </td>
-                              <td>Move cursor to previous month.</td>
+                              <td>{this.labels.keyboardShortcutArrowdown}</td>
                             </tr>
                             <tr>
                               <td>
-                                <kbd>Page down</kbd>
+                                <kbd>{this.labels.keyboardKeyPageup}</kbd>
                               </td>
-                              <td>Move cursor to next month.</td>
-                            </tr>
-                            <tr>
-                              <td><kbd>Shift</kbd> + <kbd>Page up</kbd></td>
-                              <td>Move cursor to previous year.</td>
-                            </tr>
-                            <tr>
-                              <td><kbd>Shift</kbd> + <kbd>Page down</kbd></td>
-                              <td>Move cursor to next year.</td>
+                              <td>{this.labels.keyboardShortcutPageup}</td>
                             </tr>
                             <tr>
                               <td>
-                                <kbd>Home</kbd>
+                                <kbd>{this.labels.keyboardKeyPagedown}</kbd>
                               </td>
-                              <td>Move cursor to first day of the month.</td>
+                              <td>{this.labels.keyboardShortcutPagedown}</td>
+                            </tr>
+                            <tr>
+                              <td><kbd>{this.labels.keyboardKeyShift}</kbd> + <kbd>{this.labels.keyboardKeyPageup}</kbd></td>
+                              <td>{this.labels.keyboardShortcutShiftPageup}</td>
+                            </tr>
+                            <tr>
+                              <td><kbd>{this.labels.keyboardKeyShift}</kbd> + <kbd>{this.labels.keyboardKeyPagedown}</kbd></td>
+                              <td>{this.labels.keyboardShortcutShiftPagedown}</td>
                             </tr>
                             <tr>
                               <td>
-                                <kbd>End</kbd>
+                                <kbd>{this.labels.keyboardKeyHome}</kbd>
                               </td>
-                              <td>Move cursor to last day of the month.</td>
+                              <td>{this.labels.keyboardShortcutHome}</td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <kbd>{this.labels.keyboardKeyEnd}</kbd>
+                              </td>
+                              <td>{this.labels.keyboardShortcutEnd}</td>
                             </tr>
                             </tbody>
                           </table>
